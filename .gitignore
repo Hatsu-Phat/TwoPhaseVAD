@@ -10,17 +10,17 @@ env/
 venv/
 ENV/
 
-# Logs (Bỏ qua toàn bộ log train/eval)
+# Logs
 logs/
 *.log
 
-# Backup files (Các file do người dùng tạo)
+# Backup files
 *.bak
 *.bak_*
 *~
 *.swp
 
-# Model Weights & Checkpoints (Không nên push file nặng)
+# Model Weights & Checkpoints
 *.pth
 *.pt
 *.ckpt
@@ -28,7 +28,7 @@ logs/
 *.hdf5
 *.onnx
 
-# Data & Features (Thư mục dữ liệu, nếu có)
+# Data & Features
 data/
 datasets/
 features/
