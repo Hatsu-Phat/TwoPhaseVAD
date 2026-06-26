@@ -1,0 +1,20 @@
+manifest: /home/grouphahieu/imagenet/UCF-Crime/phase2_clips_from_evit/manifest_phase2.jsonl
+num_classes: 13
+clip_len: 16
+image_size: 224
+batch_size: 8
+epochs: 50
+lr: 0.0001
+weight_decay: 0.0001
+pretrained: true
+device: cuda
+num_workers: 4
+models:
+  - simple_cnn
+  - resnet18
+  - resnet50
+  - efficientnet_b0
+  - efficientnet_b3
+  - vit_b_16
+  - swin_t
+  - convnext_tiny

@@ -1,0 +1,42 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Logs (Bỏ qua toàn bộ log train/eval)
+logs/
+*.log
+
+# Backup files (Các file do người dùng tạo)
+*.bak
+*.bak_*
+*~
+*.swp
+
+# Model Weights & Checkpoints (Không nên push file nặng)
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+*.onnx
+
+# Data & Features (Thư mục dữ liệu, nếu có)
+data/
+datasets/
+features/
+*.npy
+*.npz
+
+# IDE & OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
