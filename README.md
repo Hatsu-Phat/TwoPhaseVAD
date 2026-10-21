@@ -1,13 +1,13 @@
 <div align="center">
 <h1>Two-Phase NASNetMobile–Transformer Pipeline for Weakly Supervised Video Anomaly Detection and Fine-Grained Crime Classification</h1>
 
+[![CSoNet 2026](https://img.shields.io/badge/CSoNet-2026-0055A5?style=for-the-badge)](https://csonet-conf.github.io/csonet26/index.php/accepted-papers/index.html)
+
 </div>
 
-> **Automated Video Data Processing, Workflow Automation, and Comparative Analysis**
-> 
 > *This project was developed as a Graduation Thesis at the **University of Information Technology – Vietnam National University, Ho Chi Minh City (UIT-VNUHCM)**.*
 > 
-> *Faculty of Information Systems, University of Information Technology, Ho Chi Minh City, Vietnam*
+> ***Faculty of Information Systems, University of Information Technology, Ho Chi Minh City, Vietnam***
 
 ---
 
@@ -18,26 +18,7 @@
 
 ## 📖 Abstract
 
-Video anomaly detection (VAD) in untrimmed surveillance footage remains challenging because abnormal events are sparse, context-dependent, and fine-grained anomaly categories often exhibit visual ambiguity. Existing weakly supervised methods mainly focus on binary anomaly detection, leaving the connection between temporal localization and downstream anomaly categorization underexplored. 
-
-To address this gap, this study proposes a **two-phase cascaded framework** that bridges weakly supervised temporal localization and fine-grained anomaly recognition:
-- **Phase 1:** Gaussian Mixture Model (GMM)-based motion selection identifies informative frames, NASNetMobile extracts compact spatial features, and a Transformer-based temporal model captures long-range dependencies to produce anomaly scores. 
-- **Phase 2:** A localization-guided temporal cropping mechanism converts high-confidence anomaly responses into 64-frame clips, which are uniformly sampled into 16-frame sequences and classified at the clip level using lightweight 2D backbones (ConvNeXt-Tiny). 
-
-This design reduces temporal redundancy while preserving local event context around suspicious intervals, providing a modular and computationally efficient baseline for bridging weakly supervised temporal localization and fine-grained anomaly categorization.
-
----
-
-## 🚀 Project Highlights
-
-* Built a **Python-based video processing workflow** for UCF-Crime and XD-Violence, representing more than **345 hours of video data**.
-* Automated preprocessing steps including **motion-based frame selection, feature extraction, temporal clip generation, and input standardization**.
-* Transformed unstructured surveillance videos into structured intermediate representations including frames, feature matrices, anomaly scores, temporal clips, and predictions.
-* Designed a two-phase workflow separating **Temporal Anomaly Localization** from **Fine-Grained Crime Classification**.
-* Compared multiple model configurations under consistent preprocessing and evaluation settings.
-* Summarized experimental results through **tables, visualizations, cross-validation results, and performance metrics**.
-* Built a web-based prototype supporting **video upload, processing monitoring, analytical result tracking, dashboard visualization, alerts, feedback, and CSV export**.
-
+> *Video anomaly detection (VAD) in untrimmed surveillance footage remains challenging because abnormal events are sparse, context-dependent, and fine-grained anomaly categories often exhibit visual ambiguity. Existing weakly supervised methods mainly focus on binary anomaly detection, leaving the connection between temporal localization and downstream anomaly categorization underexplored. To address this gap, this study proposes a two-phase cascaded framework that bridges weakly supervised temporal localization and fine-grained anomaly recognition. In Phase 1, Gaussian Mixture Model (GMM)-based motion selection identifies informative frames, NASNetMobile extracts compact spatial features, and a Transformer-based temporal model captures long-range dependencies to produce anomaly scores. In Phase 2, a localization-guided temporal cropping mechanism converts high-confidence anomaly responses into 64-frame clips, which are uniformly sampled into 16-frame sequences and classified at the clip level using lightweight 2D backbones with Temporal Average Pooling. This design reduces temporal redundancy while preserving local event context around suspicious intervals. Overall, the proposed framework provides a modular and computationally efficient baseline for bridging weakly supervised temporal localization and fine-grained anomaly categorization.*
 
 ---
 
@@ -48,22 +29,6 @@ The proposed framework processes long surveillance videos through two connected 
 <div align="center">
   <img src="figs/full_pipeline.png" alt="End-to-End Video Data Processing Pipeline" width="90%">
 </div>
-
-### Workflow Overview
-
-```text
-Raw Surveillance Video
-        ↓
-Motion-Based Frame Selection & Feature Extraction
-        ↓
-Temporal Anomaly Localization (Transformer)
-        ↓
-Localization-Guided Clip Generation (64-frame window)
-        ↓
-Fine-Grained Crime Classification (ConvNeXt-Tiny)
-        ↓
-Predicted Category + Confidence
-```
 
 ---
 
